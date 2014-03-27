@@ -8,7 +8,12 @@
     <script type="text/javascript" src="js/Jquery.js"></script>
 	<script type='text/javascript'>
     function carrega(sPagina){
-      $("#divPrincipal").load(sPagina);		
+      $("#divPrincipal").load(sPagina);
+	  $("this").mousemove(
+	  	function(mouse){
+	      $(".tooltip").css("left",mouse.pageX);
+	  	  $(".tooltip").css("top",mouse.pageY);
+        });	
     }
     
     function padrao(){
@@ -38,7 +43,7 @@
 </style>
 
 <div id="menu">
-    <ul class="menu">
+   <ul class="menu">
         <li><a href="http://localhost/jonas/frmPrincipal.php"><span>Inicial</span></a></li>
         <li><a href="#" class="parent"><span>Cadastros</span></a>
             <div><ul>
