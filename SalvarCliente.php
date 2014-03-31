@@ -6,10 +6,6 @@
 	$_POST['stipocliente']   = trim($_POST['stipocliente']);
 	$_POST['scpfcnpj']       = trim($_POST['scpfcnpj']);
 	$_POST['scidade']        = trim($_POST['scidade']);
-	if($_POST['bativo']){
-		$_POST['bativo'] = 1;
-	}
-	else {$_POST['bativo'] = 0;}
 	
 	//"$sql" string para Inserção de Registros na Tabela
 	$sql =  "INSERT INTO tblcliente(sNomeCliente, sTipoCliente, sCpfCnpj,";
@@ -26,5 +22,5 @@
 		echo 'Erro ao inserir cadastro';
 	}
 	
-	header('Location: frmprincipal.php');
+	//header('Location: frmprincipal.php');
 ?>   
