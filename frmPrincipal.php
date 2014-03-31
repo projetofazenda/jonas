@@ -3,24 +3,19 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <title>Sistema Fazenda Feliz</title>
+    <title>Sistema Fazenda</title>
     <link type="text/css" href="css/menu.css" rel="stylesheet" />
     <script type="text/javascript" src="js/Jquery.js"></script>
-	<script type='text/javascript'>
-    function carrega(sPagina){
-      $("#divPrincipal").load(sPagina);
-	  $("this").mousemove(
-	  	function(mouse){
-	      $(".tooltip").css("left",mouse.pageX);
-	  	  $(".tooltip").css("top",mouse.pageY);
-        });	
-    }
-    
-    function padrao(){
-    $("#divPrincipal").height = 900;
-        
-    };
-    </script>
+<script type='text/javascript'>
+function carrega(sPagina){
+  $("#divPrincipal").load(sPagina);		
+}
+
+function padrao(){
+$("#divPrincipal").height = 900;
+	
+};
+</script>
 </head>
 <body onLoad="padrao();">
 
@@ -43,25 +38,24 @@
 </style>
 
 <div id="menu">
-   <ul class="menu">
-        <li><a href="http://localhost/jonas/frmPrincipal.php"><span>Inicial</span></a></li>
+    <ul class="menu">
         <li><a href="#" class="parent"><span>Cadastros</span></a>
             <div><ul>
-                <li><a href="#" onClick="carrega('categoria.php')"><span>Categoria</span></a></li>
                 <li><a href="#" onClick="carrega('bovino.php')"><span>Bovino</span></a></li>
-                <li><a href="#"><span>Marca</span></a></li>
-                <li><a href="#"><span>Unidade</span></a></li>
-                <li><a href="#"><span>Produto</span></a></li>
-                <li><a href="#"><span>Setor</span></a></li>
-                <li><a href="#"><span>Vacina</span></a></li>
+                <li><a href="#" onClick="carrega('cliente.php')"><span>Cliente</span></a></li>
+                <li><a href="#" onClick="carrega('produto.php')"><span>Produto</span></a></li>
+                <li><a href="#" onClick="carrega('setor.php')"><span>Setor</span></a></li>
+                <li><a href="#" onClick="carrega('vacina.php')"><span>Vacina</span></a></li>
+                <li><a href="#" onClick="carrega('formapagamento.php')"><span>Forma De Pagamento</span></a></li>
             </ul></div>
         </li>
         
         <li><a href="#" class="parent"><span>Lançamentos</span></a>
             <div><ul>
-                <li><a href="#"><span>Compra</span></a></li>
-                <li><a href="#"><span>Venda</span></a></li>     
-                <li><a href="#"><span>Registro Vacina</span></a></li>     
+                <li><a href="#" onClick="carrega('compra.php')"><span>Compra</span></a></li>
+                <li><a href="#" onClick="carrega('venda.php')"><span>Venda</span></a></li>     
+                <li><a href="#" onClick="carrega('registrovacina.php')"><span>Registro Vacina</span></a></li> 
+                <li><a href="#" onClick="carrega('pesagen.php')"><span>Pesagen</span></a></li>     
                 </ul>
             </div>
         </li>    
