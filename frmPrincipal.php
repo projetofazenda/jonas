@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,15 +10,23 @@
     <script type="text/javascript" src="js/Jquery.js"></script>
 <script type='text/javascript'>
 function carrega(sPagina){
-  $("#divPrincipal").load(sPagina);		
+  $("#container").load(sPagina);		
 }
 
 function padrao(){
-$("#divPrincipal").height = 900;
+$("#container").height = 900;
 	
 };
 </script>
 </head>
+<?php
+if(isset($_SESSION['slogin'])){
+
+	header("Location: login.php");
+}
+
+
+?>
 <body onLoad="padrao();">
 
 <style type="text/css">
@@ -82,10 +92,10 @@ $("#divPrincipal").height = 900;
             </div>
         </li>
         <li><a href="#"><span>Sobre</span></a></li>
-        <li class="last"><a href="#"><span>Versão 1.0</span></a></li>
+        <li class="last"><a href="sair.php"><span>Sair</span></a></li>
     </ul>
 </div>
-<div id="divPrincipal" style="margin-top:40px">
+<div id="container" style="margin-top:40px">
 
 </div>
 <div id="copyright">Copyright &copy; 2014 <a href="">Sistemas Maninho</a></div>

@@ -21,6 +21,6 @@
 	}else{
 		echo 'Erro ao inserir cadastro';
 	}
-	
-	//header('Location: frmprincipal.php');
+	echo "<script>alert('Cadastrado com sucesso!');</script>";
+	header('Location: frmprincipal.php');
 ?>   
