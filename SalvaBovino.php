@@ -24,6 +24,5 @@
 	}else{
 		echo 'Erro ao inserir cadastro';
 	}
-	
 	header('Location: frmprincipal.php');
 ?>   
