@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Tabela</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="js/prototype.lite.js"></script>
+<script src="js/moo.ajax.js"></script>
+<script src="js/site.js"></script>
+<noscript> 
+Habilite o Javascript para visualizar esta página corretamente...
+</noscript> 
+<style>
+.borda{border: 1px solid;}
+div{font-family: Verdana; font-size: 12px;}
+td{font-family: Verdana; font-size: 12px;}
+input{font-family: Verdana; font-size: 12px;}
+</style>
+</head>
+<body onLoad=load_grid()>
+<div id="msg" style="visibility: hidden;">&nbsp;<font face="Verdana" size="2">Processando...</font></div>
+<div id="resultado"></div>
+<br>
+<div>
+<form name="formulario">
+<table width="300" border="0">
+  <tr>
+    <td>Nome:</td>
+    <td><input id="nome" type="text" name="nome" size="25"></td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><input id="email" type="text" name="email" size="25"></td>
+  </tr>
+  <tr>
+    <td>Telefone:</td>
+    <td><input id="fone" type="text" name="fone" size="25"></td>
+  </tr>
+  <tr>
+  	<td><input type="button" id="botao" value="Incluir" onClick=valida_form()></td>
+    <td><input type="hidden" id="acao" value=""></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>

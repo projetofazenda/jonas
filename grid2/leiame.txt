@@ -1,0 +1,6 @@
+Criado por Fabio Andrei Lorentz
+Acesse meu site: http://fabio.intime.com.br
+
+Para 'instalar' é só criar a base com o arquivo tabela_cadastro.sql 
+que está no anexo e editar o arquivo conexao.inc.php que fica na 
+pasta include
