@@ -1,11 +1,34 @@
-<title>cadastro de Vacina </title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+function Foco(){
+document.cadastro.snomecliente.focus();	
+}
+</script>
+</head>
+
+<title>cadastro de vacina </title>
 </head>
 <body>
+<div style="float:left">
+ <div id="top">
+    <h1>Cadastro Vacina:</h1>
+  </div>
+<br>
+
 <form name="cadastro" action="SalvarVacina.php" method="post">
-Cadastros Vacina: <br>
-Descricao Vacina: <input required type="text" name="sdescricaovacina" value="" width="100px" ><br>
-<input type="submit" name="salvar" value="Salvar"/>   <input type="button" value="Cancelar">
-<form/>
+	<label for="name">Descricao Vacina:</label>
+    <div class="div_texbox">
+    <input required name="sdescricaovacina" type="text" class="textbox" id="name" value="">
+	</div>
+    <div class="clear"></div>
+	<div class="button_div">
+	<input name="salvar" type="submit" value="Salvar" class="buttons"> 
+    <input type="reset" onClick="Foco();" value="Cancelar" class="buttons">
+	</div>	   
+</form>
+<div class="clear"></div>
+</div>
 
 </body>
 </html>

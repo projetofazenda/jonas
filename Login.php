@@ -36,7 +36,7 @@ if($_POST['slogin'] <> ''){
 <form name="cadastro" action="" method="post">
 	<label for="name">Login</label>
     <div class="div_texbox">
-    <input name="slogin" type="text" class="textbox" id="login" value="">
+    <input name="slogin" type="text" required  class="textbox" id="login" value="">
 	</div>
     <div class="clear"></div>
 	<label for="name">Senha</label>
