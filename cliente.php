@@ -19,7 +19,7 @@ document.cadastro.snomecliente.focus();
 <form name="cadastro" action="SalvarCliente.php" method="post">
 	<label for="name">Nome cliente</label>
     <div class="div_texbox">
-    <input name="snomecliente" type="text" class="textbox" id="name" value="">
+    <input required name="snomecliente" type="text" class="textbox" id="name" value="">
 	</div>
     <div class="clear"></div>
 	<label for="name">Ativo</label>
@@ -30,17 +30,17 @@ document.cadastro.snomecliente.focus();
     <div class="clear"></div>
 	<label for="name">Tipo Pessoa:</label>
     <div class="div_texbox">
-    <input name="stipocliente" type="text" class="textbox" id="name" value="">
+    <input required name="stipocliente" type="text" class="textbox" id="name" value="">
 	</div>
     <div class="clear"></div>
 	<label for="name">Cpf/Cnpj:</label>
     <div class="div_texbox">
-    <input name="scpfcnpj" type="text" class="textbox" id="name" value="">
+    <input required name="scpfcnpj" type="text" class="textbox" id="name" value="">
 	</div>
     <div class="clear"></div>
 	<label for="name">Cidade:</label>
     <div class="div_texbox">
-    <input name="scidade" type="text" class="textbox" id="name" value="">
+    <input required name="scidade" type="text" class="textbox" id="name" value="">
 	</div>
     <div class="clear"></div>
 	<div class="button_div">
