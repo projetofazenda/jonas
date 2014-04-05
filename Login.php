@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <?php
-session_start();
+session_start("login");
 if($_POST['slogin'] <> ''){
 	$Resultado = "Login não efetuado!";
 	$con=mysql_connect("localhost","root","");
