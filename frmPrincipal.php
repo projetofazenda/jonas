@@ -1,5 +1,5 @@
 <?php
-session_start();
+include("VerificaLogin.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,14 +19,6 @@ $("#container").height = 900;
 };
 </script>
 </head>
-<?php
-if(isset($_SESSION['slogin'])){
-
-	header("Location: login.php");
-}
-
-
-?>
 <body onLoad="padrao();">
 
 <style type="text/css">

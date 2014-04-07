@@ -6,23 +6,24 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <?php
-session_start("login");
-if($_POST['slogin'] <> ''){
-	$Resultado = "Login não efetuado!";
+session_start("Login");
+$Resultado = "Login não efetuado!";
+if($_POST['sLogin'] <> ''){
 	$con=mysql_connect("localhost","root","");
 	mysql_select_db('bovinos');
     // Check connection
     if (mysqli_connect_errno())
-    {
-  		echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  	}
-	$result = mysql_query("SELECT * FROM tblusuario WHERE slogin = '" . $_POST['slogin'] . "' AND ssenha = '" . $_POST['ssenha'] . "'", $con);
-	$linhas_afetadas = mysql_affected_rows( );
-    if($linhas_afetadas > 0 )
+    { echo "Failed to connect to MySQL: " . mysqli_connect_error(); 
+	}
+	$result = mysql_query("SELECT * FROM tblusuario WHERE slogin = '" . $_POST['sLogin'] . "' AND ssenha = '" . $_POST['sSenha'] . "'", $con);
+	$linhas_afetadas = mysql_affected_rows($result);
+	echo '$linhas_afetadas';
+    if($row = mysql_fetch_array($result))
   	{	
-	 $_SESSION['slogin'] = 	$row['slogin'];
-	 $_SESSION['ssenha'] = 	$row['ssenha'];	
-	 header("Location: frmPrincipal.php");
+	 echo "ok";
+      $_SESSION['sLogin'] = 	$row['sLogin'];
+	  $_SESSION['sSenha'] = 	$row['sSenha'];	
+	  header("Location: frmPrincipal.php");
 	}
 }
 ?>
@@ -32,16 +33,15 @@ if($_POST['slogin'] <> ''){
     <h1>Efetuar login:</h1>
 </div>
 <br>
-
 <form name="cadastro" action="" method="post">
 	<label for="name">Login</label>
     <div class="div_texbox">
-    <input name="slogin" type="text" required  class="textbox" id="login" value="">
+      <input name="slogin" type="text" required  class="textbox" id="login" value="">
 	</div>
     <div class="clear"></div>
 	<label for="name">Senha</label>
     <div class="div_texbox">
-    <input name="ssenha" type="password" class="textbox" id="senha" value="">
+      <input name="ssenha" type="password" class="textbox" id="senha" value="">
 	</div>
     <div class="clear"></div>
 	<div class="button_div">
