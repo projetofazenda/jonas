@@ -9,9 +9,9 @@
 	
 	//"$sql" string para Inserção de Registros na Tabela
 	$sql =  "INSERT INTO tblcliente(sNomeCliente, sTipoCliente, sCpfCnpj,";
-	$sql .= "                       sCidade, bAtivo)";
+	$sql .= "                       sCidade, bAtivo, tDataCliente)";
 	$sql .= "              VALUES ('". $_POST['snomecliente'] ."', '". $_POST['stipocliente'] ."', '". $_POST['scpfcnpj'] ."', ";
-	$sql .= "                      '". $_POST['scidade'] ."', '". $_POST['bativo'] ."')"; 
+	$sql .= "                      '". $_POST['scidade'] ."', '". $_POST['bativo'] ."', '". date('Y-m-d H:i:s') ."')"; 
 	
 	echo '<br />';
 	$inserir = mysql_query($sql) or die("Erro ao inserir dados".mysql_error());//o erro ta aki

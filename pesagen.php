@@ -6,7 +6,6 @@
 Lancamento de Pesagen:<br>
 Cod Bovino: <input required type="text" name="icodbovino" value=""  style="width:50px" /><br>
 Peso: <input required type= "text" name="dpeso" value="" width="100px" /><br>
-Data Pesagen: <input required type= "text" name="tpesagen" value="" width="100px" />
 <input type="submit" name="salvar" value="Salvar"  />  <input type="button" value="Cancelar">
 <form/>
        

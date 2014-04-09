@@ -1,14 +1,36 @@
-<title>Lancamento de vacina </title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+function Foco(){
+document.cadastro.snomecliente.focus();	
+}
+</script>
+</head>
+
+<title>lancamento de compra </title>
 </head>
 <body>
-<form name="cadastro" action="SalvarRegistroVacina.php" method="post">
+<div style="float:left">
+ <div id="top">
+    <h1>Lancamento de Vacina</h1>
+  </div>
+<br>
 
-Lancamento de Vacina:<br>
-Cod Bovino: <input required type="text" name="icodbovino" value="" style="width:50px" /><br>
-Cod Vacina: <input required type="text" name="icodvacina" value="" style="width:50px" /><br>
-Data Vacina: <input required type="text" name="tregistrovacina" value="" width="100px" /><br>
-<input type="submit" name="salvar" value="Salvar"  />  <input type="button" value="Cancelar">
-<form/>
-       
-</body>
-</html>
+<form name="cadastro" action="SalvarRegistroVacina.php" method="post">
+	<label for="name">Cod Bovino</label>
+    <div class="div_texbox">
+    <input required name="icodbovino" type="text" class="textbox" id="name" value="">
+	</div>
+    <div class="clear"></div>
+    <label for="name">Cod Vacina</label>
+    <div class="div_texbox">
+    <input required name="icodvacina" type="text" class="textbox" id="name" value="">
+	</div>
+    <div class="clear"></div>
+	<div class="button_div">
+	<input name="salvar" type="submit" value="Salvar" class="buttons"> 
+    <input type="reset" onClick="Foco();" value="Cancelar" class="buttons">
+	</div>	   
+</form>
+<div class="clear"></div>
+</div>

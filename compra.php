@@ -1,28 +1,42 @@
 <head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <script>
- function abrir(URL) {  
- var width = 150; 
- var height = 250;  
- var left = 99; 
- var top = 99;  
- window.open(URL, 'janela', 'width='+width+', height='+height+', top='+top+', left='+left+', scrollbars=yes, status=no, toolbar=no, location=no, directories=no, menubar=no, resizable=no, fullscreen=no'); 
- } 
-
+function Foco(){
+document.cadastro.snomecliente.focus();	
+}
 </script>
+</head>
 
-<title>Lancamento de compra </title>
+<title>lancamento de compra </title>
 </head>
 <body>
-<form name="cadastro" action="SalvarCompra.php" method="post">
+<div style="float:left">
+ <div id="top">
+    <h1>Lancamento de Compra</h1>
+  </div>
+<br>
 
-Lancamento de compra:<br>
-Produto: <input required type="text" name="dvalor" value="" width="100px" />
-<input type="button" value="Adicionar" onClick="abrir('http://www.google.com');">  <br>
-Condicao Pagamento: <input required type="text" name="icodcodicaopagam" style="width:40px" />  
-<input required type="text" name="idescodicaopagam" readonly width="200px" /><br>
-Produto Vivo:<input type="checkbox" name="bprodutovivo" value=""><br>
-<input type="submit" name="salvar" value="Salvar"  />  <input type="button" value="Cancelar">
-<form/>
-       
-</body>
-</html>
+<form name="cadastro" action="SalvarCompra.php" method="post">
+	<label style="width:170px" for="name" >Valor Compra</label>
+    <div class="div_texbox">
+    <input required name="dvalor" type="text" class="textbox" id="name" value="">
+	</div>
+    <div class="clear"></div>
+    <label style="width:170px" for="name">Condicao Pagamento</label>
+    <div class="div_texbox">
+    <input required name="icodcodicaopagam" type="text" class="textbox" id="name" value="">
+	</div>
+    <div class="clear"></div>
+	<label style="width:170px" for="name">Produto Vivo</label>
+    <div class="div_texbox">
+     Sim  <input type="radio" name="bprodutovivo"  value="1" checked><br>
+     Não <input type="radio" name="bprodutovivo" value="0">
+	</div>
+    <div class="clear"></div>
+	<div class="button_div">
+	<input name="salvar" type="submit" value="Salvar" class="buttons"> 
+    <input type="reset" onClick="Foco();" value="Cancelar" class="buttons">
+	</div>	   
+</form>
+<div class="clear"></div>
+</div>

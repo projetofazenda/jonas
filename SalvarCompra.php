@@ -3,13 +3,12 @@
 
 	//se existir o post enviar executa todo o codigo abaixo
 	$_POST['dvalor']             = trim($_POST['dvalor']);
-	$_POST['tdatacomp']          = trim($_POST['tdatacomp']);
 	$_POST['icodcodicaopagam']   = trim($_POST['icodcodicaopagam']);
 	$_POST['bprodutovivo']       = trim($_POST['bprodutovivo']);
-
+	
 	//"$sql" string para Inserção de Registros na Tabela
 	$sql =  "INSERT INTO tblcompra(dValor, tDataComp, iCodCodicaoPagam,bProdutoVivo)";
-	$sql .= "              VALUES ('". $_POST['dvalor'] ."', '". $_POST['tdatacomp'] ."', '". $_POST['icodcodicaopagam'] ."', ";
+	$sql .= "              VALUES ('". $_POST['dvalor'] ."', '". date('Y-m-d H:i:s') ."', '". $_POST['icodcodicaopagam'] ."', ";
 	$sql .= "                      '". $_POST['bprodutovivo'] ."')"; 
 	
 	echo '<br />';

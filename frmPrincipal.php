@@ -1,6 +1,3 @@
-<?php
-include("VerificaLogin.php");
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,21 +62,21 @@ $("#container").height = 900;
         <li><a href="#" class="parent"><span>Relatórios</span></a>
             <div class="columns two">
                 <ul class="one">
-                    <li><a href="#"><span>Sub Item 1.1</span></a></li>
-                    <li><a href="#"><span>Sub Item 1.2</span></a></li>
-                    <li><a href="#"><span>Sub Item 1.3</span></a></li>
-                    <li><a href="#"><span>Sub Item 1.4</span></a></li>
-                    <li><a href="#"><span>Sub Item 1.5</span></a></li>
-                    <li><a href="#"><span>Sub Item 1.6</span></a></li>
-                    <li><a href="#"><span>Sub Item 1.7</span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
                 </ul>
                 <ul class="two">
-                    <li><a href="#"><span>Sub Item 2.1</span></a></li>
-                    <li><a href="#"><span>Sub Item 2.2</span></a></li>
-                    <li><a href="#"><span>Sub Item 2.3</span></a></li>
-                    <li><a href="#"><span>Sub Item 2.4</span></a></li>
-                    <li><a href="#"><span>Sub Item 2.5</span></a></li>
-                    <li><a href="#"><span>Sub Item 2.6</span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
+                    <li><a href="#"><span></span></a></li>
                 </ul>
             </div>
         </li>
@@ -90,7 +87,7 @@ $("#container").height = 900;
 <div id="container" style="margin-top:40px">
 
 </div>
-<div id="copyright">Copyright &copy; 2014 <a href="">Sistemas Maninho</a></div>
+<div id="copyright">Copyright &copy; 2014 <a href=""></a></div>
 
 </body>
 </html>

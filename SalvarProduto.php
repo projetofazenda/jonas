@@ -7,12 +7,12 @@
 	$_POST['smarca']            = trim($_POST['smarca']);
 	$_POST['sUnidadeMedida']    = trim($_POST['sunidademedida']);
 	$_POST['bativo']            = trim($_POST['bativo']);
-
+	
 	//"$sql" string para Inserção de Registros na Tabela
 	$sql =  "INSERT INTO tblprodutos(sDescricaoProduto, sCategoria, sMarca,";
-	$sql .= "                       sUnidadeMedida, bAtivo)";
+	$sql .= "                       sUnidadeMedida, bAtivo, tDataProduto)";
 	$sql .= "              VALUES ('". $_POST['sdescricaoproduto'] ."', '". $_POST['scategoria'] ."', '". $_POST['smarca'] ."', ";
-	$sql .= "                      '". $_POST['sUnidadeMedida'] ."', '". $_POST['bativo'] ."')"; 
+	$sql .= "                      '". $_POST['sunidademedida'] ."', '". $_POST['bativo'] ."', '". date('Y-m-d H:i:s') ."')"; 
 	
 	echo '<br />';
 	$inserir = mysql_query($sql) or die("Erro ao inserir dados".mysql_error());//o erro ta aki

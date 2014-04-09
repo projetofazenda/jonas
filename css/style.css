@@ -120,9 +120,9 @@ label {
 .password {
     	background-image: url(../images/16s.png);
     	background-repeat: no-repeat;
-   	background-position:left;
-   	background-color:#FFFFFF;
-	width:285px;
+   	    background-position:left;
+   	    background-color:#FFFFFF;
+	    width:285px;
     	font:normal 18px Arial;
     	color: #999999;
     	padding:3px 5px 3px 19px;
@@ -132,7 +132,7 @@ label {
 }
 
 .button_div {
-	width:435px;
+	width:700px;
 	float:left;
 	background-color:#E6E6E6;
 	border:1px solid #ccc;
