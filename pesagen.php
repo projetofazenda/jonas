@@ -1,13 +1,70 @@
-<title>Lancamento de Pesagen </title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+function Foco(){
+document.cadastro.snomecliente.focus();	
+}
+</script>
+</head>
+
+<title>Lancamento de Pesagem </title>
 </head>
 <body>
-<form name="cadastro" action="SalvarPesagen.php" method="post">
+<div style="float:left">
+ <div id="top">
+    <h1>Lançamento de Pesagem</h1>
+  </div>
+<br>
 
-Lancamento de Pesagen:<br>
-Cod Bovino: <input required type="text" name="icodbovino" value=""  style="width:50px" /><br>
-Peso: <input required type= "text" name="dpeso" value="" width="100px" /><br>
-<input type="submit" name="salvar" value="Salvar"  />  <input type="button" value="Cancelar">
-<form/>
-       
+<form name="cadastro" action="SalvarPesagen.php" method="post">
+	<label for="name">Cod Bovino</label>
+    <div class="div_texbox">
+    <input required name="icodbovino" type="text" class="textbox" id="name" value="">
+	</div>
+    <div class="clear"></div>
+	<label for="name">Peso:</label>
+    <div class="div_texbox">
+    <input required name="dpeso" type="text" class="textbox" id="name" value="">
+	</div>
+    <div class="clear"></div>
+	<div class="button_div">
+	<input name="salvar" type="submit" value="Salvar" class="buttons"> 
+    <input type="reset" onClick="Foco();" value="Cancelar" class="buttons">
+	</div>	   
+</form>
+<div class="clear"></div>
+</div>
+<div id="divGrid" style="float:left"></div>
+<table border="3"  style="max-height:500px">
+<tr bgcolor="#E6E6E6" style="color:#000">
+<td width="100%">Codigo Bovino</td>
+<td width="100%">Peso</td>
+<td width="100%">Data Pesagem</td>
+</tr>
+<?php
+	$con=mysqli_connect("localhost","root","","bovinos");
+    // Check connection
+    if (mysqli_connect_errno())
+    {
+  		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  	}
+	$result = mysqli_query($con,"SELECT * FROM tblpesobovino");
+	while($row = mysqli_fetch_array($result))
+  	{	
+		echo "<tr>";
+		echo "<td>";
+		echo $row['iCodBovino'];
+		echo "</td>";
+		echo "<td>";
+		echo $row['dPeso'];
+		echo "</td>";	
+		echo "<td>";
+		echo $row['tPesagen'];
+		echo "</td>";			
+		echo "</tr>";
+		
+  	}	
+?>
+</table>
 </body>
 </html>

@@ -33,7 +33,7 @@ document.cadastro.snomecliente.focus();
      Não <input type="radio" name="bprodutovivo" value="0">
 	</div>
     <div class="clear"></div>
-	<div class="button_div">
+	<div class="button_div" style="width:462px">
 	<input name="salvar" type="submit" value="Salvar" class="buttons"> 
     <input type="reset" onClick="Foco();" value="Cancelar" class="buttons">
 	</div>	   

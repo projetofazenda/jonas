@@ -59,6 +59,58 @@ document.cadastro.snomecliente.focus();
 </form>
 <div class="clear"></div>
 </div>
+<div id="divGrid" style="float:left"></div>
+<table border="3"  style="max-height:500px">
+<tr bgcolor="#E6E6E6" style="color:#000">
+<td width="70px">Código</td>
+<td width="100%">Identificação</td>
+<td width="100%">Peso</td>
+<td width="100%">Cod Mae</td>
+<td width="100%">Cod Pai</td>
+<td width="100%">Tipo Bovino</td>
+<td width="100%">Data Nascimento</td>
+<td width="100%">Cod Setor</td>
+</tr>
+<?php
+	$con=mysqli_connect("localhost","root","","bovinos");
+    // Check connection
+    if (mysqli_connect_errno())
+    {
+  		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  	}
+	$result = mysqli_query($con,"SELECT * FROM tblbovino");
+	while($row = mysqli_fetch_array($result))
+  	{	
+		echo "<tr>";
+		echo "<td>";
+		echo $row['iCodBovino'];
+		echo "</td>";
+		echo "<td>";
+		echo $row['sIdentificacao'];
+		echo "</td>";	
+		echo "<td>";
+		echo $row['dPeso'];
+		echo "</td>";
+		echo "<td>";
+		echo $row['iCodMae'];
+		echo "</td>";
+		echo "<td>";
+		echo $row['iCodPai'];
+		echo "</td>";
+		echo "<td>";
+		echo $row['sTipoBovino'];
+		echo "</td>";	
+		echo "<td>";
+		echo $row['tNascimento'];
+		echo "</td>";		
+		echo "<td>";
+		echo $row['iCodSetor'];
+		echo "</td>";						
+		echo "</tr>";
+		
+  	}	
+?>
+</table>
 
 </body>
 </html>

@@ -55,6 +55,9 @@ document.cadastro.snomecliente.focus();
 <tr bgcolor="#E6E6E6" style="color:#000">
 <td width="70px">Código</td>
 <td width="100%">Nome</td>
+<td width="100%">Tipo Cliente</td>
+<td width="100%">Cnpj/Cpf</td>
+<td width="100%">Cidade</td>
 </tr>
 <?php
 	$con=mysqli_connect("localhost","root","","bovinos");
@@ -72,8 +75,18 @@ document.cadastro.snomecliente.focus();
 		echo "</td>";
 		echo "<td>";
 		echo $row['sNomeCliente'];
-		echo "</td>";		
+		echo "</td>";	
+		echo "<td>";
+		echo $row['sTipoCliente'];
+		echo "</td>";
+		echo "<td>";
+		echo $row['sCpfCnpj'];
+		echo "</td>";
+		echo "<td>";
+		echo $row['sCidade'];
+		echo "</td>";							
 		echo "</tr>";
+		
   	}	
 ?>
 </table>

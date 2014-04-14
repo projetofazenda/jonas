@@ -6,7 +6,7 @@
 	$_POST['dpeso']      = trim($_POST['dpeso']);
 	
 	//"$sql" string para Inserção de Registros na Tabela
-	$sql =  "INSERT INTO tblpesobovino(IcodBovino, dPeso, tPesagen)";
+	$sql =  "INSERT INTO tblpesobovino(iCodBovino, dPeso, tPesagen)";
 	$sql .= "              VALUES ('". $_POST['icodbovino'] ."', '". $_POST['dpeso'] ."', '". date('Y-m-d H:i:s') ."')"; 
 	
 	echo '<br />';
