@@ -1,10 +1,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script>
-function Foco(){
-document.cadastro.snomecliente.focus();	
-}
-</script>
+<script language="javascript" type="text/javascript" src="js/funcoes.js"></script>
 </head>
 
 <title>cadastro de Forma de pagamento </title>
@@ -49,9 +45,10 @@ document.cadastro.snomecliente.focus();
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
   	}
 	$result = mysqli_query($con,"SELECT * FROM tblformadepagamento");
+	$i = 1;
 	while($row = mysqli_fetch_array($result))
   	{	
-		echo "<tr>";
+		echo "<tr id =\"".$i."\" style=\"background:#FFFFFF\"  onMouseOver=\"mousedentro(this.id)\" onMouseOut=\"mousefora(this.id)\" onClick=\"mudacor(this.id)\">";
 		echo "<td>";
 		echo $row['iCodFormadepagamento'];
 		echo "</td>";
@@ -59,7 +56,7 @@ document.cadastro.snomecliente.focus();
 		echo $row['sFormadePagamento'];
 		echo "</td>";	
 		echo "</tr>";
-		
+		$i = $i +1;
   	}	
 ?>
 </table>
